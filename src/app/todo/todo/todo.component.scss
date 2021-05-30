@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  align-items: center;
+
+  & > * {
+    margin: 0 5px;
+  }
+
+  .id {
+    flex: 0 0 30px;
+  }
+  .description {
+    flex: 0 0 160px;
+    word-break: break-all;
+
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+  input {
+    flex: 0 0 50px;
+  }
+  button {
+    flex: 0 0 80px;
+  }
+}

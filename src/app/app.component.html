@@ -1,0 +1,13 @@
+<ng-container [ngSwitch]="loading">
+  <ng-container *ngSwitchCase="true">
+    Loading...
+  </ng-container>
+  <ng-container *ngSwitchCase="false">
+    <app-todo-list [todos]="todos"
+                   (add)="onAdd($event)"
+                   (remove)="onRemove($event)">
+    </app-todo-list>
+    <hr>
+    <pre>{{ todos | json }}</pre>
+  </ng-container>
+</ng-container>
