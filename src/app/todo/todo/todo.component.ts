@@ -5,7 +5,7 @@ import { ContextService } from 'app/shared/services/context.service';
   selector: 'app-todo',
   template: `
     <span class="id">{{ todo.id }}.</span>
-    <span class="description" [class.done]="todo.done">{{ todo.description }}</span>
+    <app-description [done]="todo.done" [description]="todo.description"></app-description>
     <input type="checkbox" [(ngModel)]="todo.done" [ngModelOptions]="{ standalone: true }" />
     <button (click)="remove()">Remove</button>
   `,

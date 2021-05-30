@@ -7,6 +7,7 @@ import { fakeAsync, tick } from '@angular/core/testing';
 import { TodoComponent } from 'app/todo/todo/todo.component';
 import { ContextService } from 'app/shared/services/context.service';
 import { SharedModule } from 'app/shared/shared.module';
+import { TodoListComponent } from 'app/todo/todo-list/todo-list.component';
 
 fdescribe('TodoComponent', () =>
 {
@@ -49,7 +50,6 @@ fdescribe('TodoComponent', () =>
     tick();
 
     expect(spectator.query('.id').innerHTML).toBe('1.');
-    expect(spectator.query('.description').innerHTML).toBe('aaa');
     expect(spectator.query<HTMLInputElement>('input').checked).toBe(false);
   }));
 
@@ -60,7 +60,6 @@ fdescribe('TodoComponent', () =>
     tick();
 
     expect(spectator.query('.id').innerHTML).toBe('2.');
-    expect(spectator.query('.description.done').innerHTML).toBe('bbb');
     expect(spectator.query<HTMLInputElement>('input').checked).toBe(true);
   }));
 

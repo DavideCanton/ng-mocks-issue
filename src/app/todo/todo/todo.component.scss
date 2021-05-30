@@ -9,13 +9,9 @@
   .id {
     flex: 0 0 30px;
   }
-  .description {
+  app-description {
     flex: 0 0 160px;
-    word-break: break-all;
-
-    &.done {
-      text-decoration: line-through;
-    }
+    display: block;
   }
   input {
     flex: 0 0 50px;
